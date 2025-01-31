@@ -25,17 +25,6 @@ Pour chaque entrée, on veut garder la date et l'heure auxquelles elle a été s
 Enfin, les médicaments sont identifiés par le nom de la molécule et sont accompagnés de quelques lignes de texte décrivant leurs effets. Un médicament n'est autorisé que pour certaines espèces.
 
 
-## Livrables
-
-**Dates de rendu des différents livrables :**
-- Mercredi 09/10 : Lien vers notre gitlab + Projet 1 (NDC + MCD v1)
-- Mercredi 16/10 : Projet 2 (MCD v2 + MLD v1)
-- Jeudi 14/11 : Projet 3 (MLD v2 + SQL CREATE et INSERT)
-- Mercredi 20/11 : Projet 4 (Finalisation SQL, SELECT et GROUP BY, première applic. python) au lieu du 20/11
-- Mercredi 18/12 : Projet 5 (Application python finalisée)
-- Mercredi 08/01 : Projet 6 (NoSQL R-JSON)
-
-Chaque livrable sera livré sur le gitlab de l'UTC dans la branche main dans le dossier du rendu correspondant.
 
 ## Détails du système
 
