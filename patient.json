@@ -1,0 +1,139 @@
+[
+    {
+      "id_patient": 1,
+      "proprietaire": [
+        {
+          "nom": "Pogba",
+          "prenom": "Paul",
+          "date_naissance": "1993-03-15",
+          "adresse": {
+            "num": 25,
+            "rue": "rue du chair",
+            "ville": "Sarcelles",
+            "code_postal": 95585
+          },
+          "telephone": "0782456789",
+          "start": "10/11/2020",
+          "end": "01/01/2025"
+        },
+        {
+          "nom": "Vinicius",
+          "prenom": "Junior",
+          "date_naissance": "2000-07-12",
+          "adresse": {
+            "num": 3,
+            "rue": "rue de rio de janeiro",
+            "ville": "Sarcelles",
+            "code_postal": 12345
+          },
+          "telephone": "0798765432",
+          "start": "02/01/2025"
+        }
+      ],
+      "veterinaire": [
+        {
+          "nom": "Pogba",
+          "prenom": "Mathias",
+          "date_naissance": "1990-08-19",
+          "adresse": {
+            "num": 25,
+            "rue": "rue du chair",
+            "ville": "Sarcelles",
+            "code_postal": 95585
+          },
+          "telephone": "0783123456",
+          "specialise" : ["chien","chat","crocodile"],
+          "start": "11/11/2021",
+          "end": "30/12/2024"
+        }
+      ],
+      "assistant": [
+        {
+          "nom": "Pogba",
+          "prenom": "Florentin",
+          "date_naissance": "1990-08-19",
+          "adresse": {
+            "num": 25,
+            "rue": "rue du chair",
+            "ville": "Sarcelles",
+            "code_postal": 95585
+          },
+          "telephone": "0782123456",
+          "specialise" : ["chien","chat"],
+          "start": "11/11/2021",
+          "end": "30/12/2024"
+        }
+      ],
+      "nom": "Croc-Mou",
+      "date_naissance": "2019-01-01",
+      "num_puce": 123456,
+      "passport": "Passport123",
+      "espece": {
+        "type": "chien",
+        "categorie": "canides"
+      },
+      "dossier_medical": {
+        "analyses": [
+          {
+            "lien": "lien1.pdf",
+            "date": "2025-01-01T12:00:00"
+          }
+        ],
+        "observations": [
+          {
+            "observation": "Observation1",
+            "date": "2025-01-01T12:00:00"
+          }
+        ],
+        "procedures": [
+          {
+            "description": "Description de la procédure",
+            "date": "2025-01-01T12:00:00"
+          }
+        ],
+        "mesures": [
+          {
+            "taille": 50,
+            "date_taille": "2025-01-01T12:00:00"
+          },
+          {
+            "poids": 20,
+            "date_poids": "2025-01-01T12:00:00"
+          }
+        ],
+        "traitements": [
+          {
+            "start": "06/01/2025",
+            "duree": 1,
+            "date": "01/01/2025",
+            "veterinaire" : {
+              "nom": "Pogba",
+              "prenom": "Mathias",
+              "date_naissance": "1990-08-19",
+              "adresse": {
+                "num": 25,
+                "rue": "rue du chair",
+                "ville": "Sarcelles",
+                "code_postal": 95585
+              },
+              "telephone": "0783123456"
+            },
+            "medicaments": [
+              {
+                "nom": "doliprane",
+                "effet": "mal de tête",
+                "quantite": 3,
+                "autorise" : ["crocodile","chien", "chat"]
+              },
+              {
+                "nom": "minoxidil",
+                "effet": "pousse de la barbe",
+                "quantite": 1,
+                "autorise" : ["chien", "chat"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]

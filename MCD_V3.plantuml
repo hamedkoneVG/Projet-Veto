@@ -1,0 +1,130 @@
+@startuml
+class Personnes {
+nom : string
+prenom : string
+date_naissance : date
+adresse : string
+telephone : string
+}
+
+class Clients {
+}
+
+class Personnels {
+}
+
+class Assistants {
+}
+
+class Veterinaires {
+}
+
+class Traitements {
+start: date
+duree : integer
+date : datetime
+}
+
+class Medicaments {
+nom : string
+effet : text
+}
+
+class Especes {
+type : string
+categorie : enum{"félins","canidés","reptile","rongeurs","oiseaux","autres"}
+}
+
+class Patients {
+nom : string
+date_naissance : date
+id : integer
+passeport : string
+}
+
+class Dossiers_med {
+}
+
+class Mesures {
+}
+
+class Tailles {
+taille : integer
+date : datetime
+}
+
+class Poids{
+poids : integer
+date : datetime
+}
+
+class Analyses {
+lien : string
+date : datetime
+}
+
+class Observations {
+observation : string
+date : datetime
+}
+class Procedures {
+desc : text
+date : datetime
+}
+
+Personnes <|-- Clients
+Personnes <|-- Personnels
+
+Personnels <|-- Assistants
+Personnels <|-- Veterinaires
+
+Dossiers_med "1" -- "*" Mesures : inclut
+Dossiers_med "1" -- "*" Analyses : contient
+Dossiers_med "1" -- "*" Observations : comporte
+Dossiers_med "1" -- "*" Procedures : suit
+Dossiers_med "1" -- "*" Traitements : l'animal suit
+
+Mesures <|-- Tailles
+Mesures <|-- Poids
+
+Patients "1" -- "1" Dossiers_med : possede
+
+Patients "*" -- "1" Especes : appartient
+
+Personnels "*" -- "*" Especes : specialise
+
+Clients "*" -- "*" Patients
+
+Veterinaires "1" -- "*" Traitements : prescrit
+
+Medicaments "*" -- "*" Traitements : compose
+
+Medicaments "*" -- "*" Especes : autorise
+
+Personnels "*" -- "*" Patients
+
+class Suivi{
+start : date
+end : date
+}
+(Personnels,Patients) . Suivi
+
+class Appartient{
+start : date
+end : date
+}
+(Clients,Patients) . Appartient
+
+class Quantite{
+nbr : integer
+}
+(Traitements,Medicaments) . Quantite
+
+note "Héritage\nexclusif" as N1
+(Personnels,Personnes) .. N1
+N1 .. (Personnes,Clients)
+
+note "Héritage\nexclusif" as N2
+N2 .. (Personnels,Assistants)
+(Personnels,Veterinaires) .. N2
+@enduml
